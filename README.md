@@ -15,6 +15,7 @@
 
 >  A dwarf on a giant's shoulders sees farther of the two
 
+This is an example used by the great work quaterion.
 Quaterion is a framework for fine-tuning similarity learning models.
 The framework closes the "last mile" problem in training models for semantic search, recommendations, anomaly detection, extreme classification, matching engines, e.t.c.
 
