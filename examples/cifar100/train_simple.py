@@ -9,7 +9,7 @@ from quaterion_models.heads import EmptyHead, EncoderHead
 from quaterion import Quaterion, TrainableModel
 from quaterion.loss import OnlineContrastiveLoss, SimilarityLoss, TripletLoss
 
-from .cifar100 import MobilenetV3Encoder, get_dataloaders
+from .cifar100 import SwinTransformer, get_dataloaders
 
 
 class Model(TrainableModel):
@@ -21,7 +21,7 @@ class Model(TrainableModel):
         super().__init__()
 
     def configure_encoders(self) -> Union[Encoder, Dict[str, Encoder]]:
-        return MobilenetV3Encoder(self._embedding_size)
+        return SwinTransformer(self._embedding_size)
 
     def configure_head(self, input_embedding_size) -> EncoderHead:
         return EmptyHead(input_embedding_size)
