@@ -19,7 +19,7 @@ from quaterion.eval.group import RetrievalRPrecision
 from quaterion.loss import SimilarityLoss, TripletLoss
 from quaterion.train.xbm import XbmConfig
 
-from .cifar100 import MobilenetV3Encoder, get_dataloaders
+from .cifar100 import SwinTransformer, get_dataloaders
 
 
 class Model(TrainableModel):
