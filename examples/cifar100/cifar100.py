@@ -59,7 +59,7 @@ def get_dataloaders(batch_size: int = 128):
     return train_dataloader, val_dataloader
 
 
-class MobilenetV3Encoder(Encoder):
+class SwinTransformer(Encoder):
     def __init__(self, embedding_size: int):
         super().__init__()
         self.encoder = torchvision.models.mobilenet_v3_small(pretrained=True)
