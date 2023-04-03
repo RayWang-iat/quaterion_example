@@ -2,6 +2,7 @@ import argparse
 from typing import Dict, Union
 
 import pytorch_lightning as pl
+from model import SwinTransformer
 import torch
 from pytorch_metric_learning import losses, miners
 from quaterion_models.encoders import Encoder
