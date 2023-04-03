@@ -2,6 +2,7 @@ import os
 
 import torch.nn as nn
 from quaterion_models.encoders import Encoder
+from model import SwinTransformer
 
 from quaterion.dataset import GroupSimilarityDataLoader, SimilarityGroupDataset
 
@@ -62,7 +63,7 @@ def get_dataloaders(batch_size: int = 128):
 class SwinTransformer(Encoder):
     def __init__(self, embedding_size: int):
         super().__init__()
-        self.encoder = torchvision.models.mobilenet_v3_small(pretrained=True)
+        self.encoder = torchvision.models.swint(pretrained=True)
         self.encoder.classifier = nn.Sequential(nn.Linear(576, embedding_size))
 
         self._embedding_size = embedding_size
